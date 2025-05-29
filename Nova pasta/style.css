@@ -1,0 +1,90 @@
+:root {
+    /* Paleta de cores base do site */
+    --main--color: #E0E0E0;
+    --bg: #0E1116;
+    --main--color--hover: #F40000;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: var(--bg);
+    color: var(--main--color);
+    font-family: 'Poppins', sans-serif;
+  }
+  header{
+    display: grid;
+    grid-template-columns: 210px 1fr;
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+  }
+  aside{
+    text-align: left;
+    padding: 35px;
+  }
+  aside h2 br{
+    color: #F40000;
+  }
+  aside h2, aside h4{
+    margin-bottom: 35px;
+  }
+  aside h4{
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    align-items: center;
+  }
+  aside h4 i{
+    font-size: 17px;
+  }
+.social-media{
+    text-align: right;
+    display: grid;
+    grid-template-rows: 70px 70px 70px;
+    font-size: 25px;
+    margin-top: 75px;
+}
+.detalhe-social-media i{
+    color: var(--bg);
+    background-color: #ffffff;
+    width: 45px;  /* tamanho fixo */
+    height: 45px; /* tamanho fixo */
+    border-radius: 50%; /* deixa o quadrado virar círculo */
+    
+    display: inline-flex; /* ou flex, depende do contexto */
+    align-items: center;  /* centraliza verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
+    
+
+    font-size: 23px; /* tamanho do ícone */
+}
+
+nav section{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    gap: 31px;
+    font-size: 13px;
+    
+}
+nav section h4{
+    border-style: solid;
+    padding: 15px;
+    border-radius: 100px;
+    width: 110px;
+    height: 40px;
+    display: inline-flex; /* ou flex, depende do contexto */
+    align-items: center;  /* centraliza verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
+}
