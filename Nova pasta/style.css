@@ -11,7 +11,7 @@
     outline: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: 0.2s linear;
+    transition: background-color 0.2s linear, color 0.2s linear;
     box-sizing: border-box;
   }
   body{
@@ -30,23 +30,43 @@
   }
   aside{
     text-align: left;
-    padding: 35px;
+    padding: 31px;
   }
-  aside h2 br{
-    color: #F40000;
-  }
-  aside h2, aside h4{
+  aside h3 {
     margin-bottom: 35px;
   }
   aside h4{
+    margin-bottom: 15px;
+  }
+  aside h4 {
     display: flex;
     gap: 15px;
     font-size: 14px;
     align-items: center;
+    
+    /* Fixando o tamanho para evitar "movimentos" */
+    padding: 11px;
+    width: 160px;
+
+    border-radius: 100px;
+    /* Adicionando transição apenas no fundo */
+    transition: background-color 0.2s linear;
+
+    
   }
+  
+  aside h4:hover {
+    background-color: rgba(191, 188, 203, 0.3);
+
+  }
+
+
+
   aside h4 i{
     font-size: 17px;
   }
+
+
 .social-media{
     text-align: right;
     display: grid;
@@ -80,6 +100,7 @@ nav section{
 }
 nav section h4{
     border-style: solid;
+    border-width: 2px;
     padding: 15px;
     border-radius: 100px;
     width: 110px;
