@@ -1,9 +1,11 @@
 :root {
   /* Paleta de cores base do site */
-  --main--color: #000000;
+   --main--color: #000000;
   --main--subtitle--color: #4A3333;
   --main--title--color: #FFFFFF;
   --bg: #FFFBF3;
+  --card-bg: rgb(255, 248, 239);
+  --footer-bg: rgb(244, 248, 211);
 }
 * {
   margin: 0;
@@ -100,7 +102,7 @@ header {
 .casa {
   height: 100vh;
   width: 100%;
-  background-image: url('LojaVirtual-Imagens/LojaVirtual-OutrasImagens/6bfec71c-4c3a-4b20-b21f-dfbcf0a58bce.jpeg');
+  background-image: url('LojaVirtual-Imagens/LojaVirtual-OutrasImagens/Pagina\ Coleções.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -142,40 +144,66 @@ header {
 /* Títulos */
 
 
-.Cards{
+/* ===== PRODUCTS SECTION ===== */
+
+.tres1{
+    background-color: #ffced8;
+}
+.tres2{
+  background-color: #FFE5CE;
+}
+.tres3{
+  background-color: #664C43;
+}
+.Pelucia .bag {
+  color: white;
+}
+.tres3 h1{
+  color: white;
+}
+
+
+.Cards {
   display: grid;
-  grid-template-columns: 250px 250px 250px;
+  grid-template-columns: repeat(3, 250px);
   justify-content: center;
   text-align: center;
   gap: 80px;
 }
-.Cardi{
+
+.Cardi {
   display: grid;
   grid-template-rows: 100px 1fr;
+  padding-top: 90px;
 }
-.card{
-  background-color: rgb(208, 95, 95);
+
+.card {
+  background-color: white;
   padding: 30px;
   border-radius: 50px;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
-.card h3{
+
+.card h3 {
   font-size: 20px;
 }
-.card .preco{
-   margin-bottom: 10px;
-   margin-top: 10px;
+
+.card .preco {
+  margin: 10px 0;
 }
-.card:hover{
-   transform: scale(1.05);
+
+.card:hover {
+  transform: scale(1.05);
 }
-.card-button{
+
+.card-button {
   display: flex;
   justify-content: center;
   gap: 30px;
 }
-.card-button .comprar{
+
+.card-button .comprar {
   font-family: 'League Spartan', sans-serif;
   font-size: 18px;
   padding: 10px 15px;
@@ -184,11 +212,14 @@ header {
   color: var(--main--title--color);
   border-radius: 8px;
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
-.card-button .comprar:hover{
-   transform: scale(1.05);
+
+.card-button .comprar:hover {
+  transform: scale(1.05);
 }
-.card-button .favoritar{
+
+.card-button .favoritar {
   font-family: 'League Spartan', sans-serif;
   font-size: 14px;
   padding: 10px 12px;
@@ -197,65 +228,108 @@ header {
   color: #000;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
 }
-.card-button .favoritar:hover{
-   transform: scale(1.05);
+
+.card-button .favoritar:hover {
+  transform: scale(1.05);
   background-color: red;
   color: var(--main--title--color);
   border-color: red;
 }
-.favoritar i{
+
+.favoritar i {
   font-size: 20px;
 }
-.Sobre-column{
+
+.Pelucia {
+  display: flex;
+  align-items: left;
+  gap: 20px;
+}
+
+.Pelucia i {
+  font-size: 35px;
+}
+
+/* ===== ABOUT SECTION ===== */
+.nick {
+  background-color:  var(--footer-bg);;
+}
+
+.title {
+  padding-bottom: 70px;
+  text-align: left;
+}
+
+.Sobre-column {
   display: grid;
-  justify-content: center;
   grid-template-columns: 400px 500px;
+  justify-content: center;
   align-items: center;
   gap: 200px;
 }
-.sobre p{
-  padding: 10px;
-}
-.sobre i{
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-.title{
-  padding-bottom: 70px;
-}
-.sobre{
+
+.sobre {
   cursor: pointer;
   transition: transform 0.2s ease;
 }
-.sobre:hover{
-    transform: scale(1.05);
+
+.sobre:hover {
+  transform: scale(1.05);
 }
-.footer{
-  display: grid;
-  grid-template-columns: 450px 1fr;
-}
-.footer-nav{
-    display: grid;
-  grid-template-columns: 270px 270px 270px;
-}
-.footer-row p{
+
+.sobre i {
+  font-size: 30px;
   margin-bottom: 20px;
 }
-.title-footer{
-  font-weight: bold;
+
+.sobre p {
+  padding: 10px;
 }
-.footer-media{
+
+/* ===== FOOTER ===== */
+.footer {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  padding: 50px 0;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 270px);
+}
+
+.footer-row p {
+  margin-bottom: 24px;
+  color: var(--main--color);
+}
+
+.title-footer {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-media {
   display: flex;
   gap: 30px;
+  margin-top: 20px;
 }
-.footer-media i{
+
+.footer-media i {
   font-size: 25px;
+  color: var(--main--color);
 }
-.footer-logo{
+
+.footer-logo {
   display: flex;
   gap: 20px;
   align-items: center;
   margin-bottom: 20px;
 }
+
+.Logo {
+  border-radius: 100px;
+}
+
+/* ===== MEDIA QUERIES (poderia adicionar responsividade aqui) ===== */
