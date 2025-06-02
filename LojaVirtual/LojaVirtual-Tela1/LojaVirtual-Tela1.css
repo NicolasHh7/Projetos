@@ -1,57 +1,346 @@
+/* ===== VARIÁVEIS E RESET ===== */
 :root {
-    /* Paleta de cores base do site */
-    --main--color: #FFFFFF;
-    --bg: #1E2749;
-    --main--color--hover: #F40000;
-  }
-  * {
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: 0.2s linear;
-    box-sizing: border-box;
-  }
-  body{
-    background-color: var(--bg);
-    color: var(--main--color);
-    font-family: 'Inter', sans-serif;
-  }
-  header{
-    display: grid;
-    grid-template-columns: 210px 1fr;
-  }
-  aside{
-    text-align: left;
-    padding: 35px;
-  }
-  aside h2, aside h4{
-    margin-bottom: 35px;
-  }
-  aside h4{
-    display: flex;
-    gap: 15px;
-  }
-.social-media{
-    text-align: right;
-    display: grid;
-    grid-template-rows: 70px 70px 70px;
-    font-size: 25px;
-    margin-top: 110px;
+  /* Paleta de cores base do site */
+  --main--color: #000000;
+  --main--subtitle--color: #4A3333;
+  --main--title--color: #FFFFFF;
+  --bg: #FFFBF3;
+  --card-bg: rgb(255, 248, 239);
+  --footer-bg: rgb(244, 248, 211);
 }
-.detalhe-social-media i{
-    color: var(--bg);
-    background-color: #ffffff;
-    width: 50px;  /* tamanho fixo */
-    height: 50px; /* tamanho fixo */
-    border-radius: 50%; /* deixa o quadrado virar círculo */
-    
-    display: inline-flex; /* ou flex, depende do contexto */
-    align-items: center;  /* centraliza verticalmente */
-    justify-content: center; /* centraliza horizontalmente */
-    
 
-    font-size: 25px; /* tamanho do ícone */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+  box-sizing: border-box;
 }
+
+/* ===== BASE ===== */
+body {
+  background-color: var(--bg);
+  color: #333;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 1442px;
+  margin: 0 auto;
+}
+
+/* Container padrão */
+section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin: 0 auto;
+  max-width: 1171px;
+}
+
+/* ===== HEADER/NAVIGATION ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 6px 0;
+  font-size: 16px;
+}
+
+.header section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1171px;
+  margin: 0 auto;
+  padding: 3px 1.5rem;
+  background-color: var(--bg);
+  border-radius: 100px;
+  border: 1px solid black;
+}
+
+.icon-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: var(--main--color);
+  transition: transform 0.2s ease;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid var(--main--subtitle--color);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icons a i {
+  font-size: 24px;
+  color: var(--main--color);
+}
+
+/* Botão de login */
+.btn-entrar {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 14px;
+  padding: 6px 14px;
+  border: 2px solid #000;
+  background-color: transparent;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-entrar:hover {
+  transform: scale(1.05);
+  background-color: var(--main--subtitle--color);
+  color: var(--main--title--color);
+  border-color: var(--main--subtitle--color);
+}
+
+/* ===== HERO SECTION ===== */
+.casa {
+  height: 100vh;
+  width: 100%;
+  background-image: url('LojaVirtual-Imagens/LojaVirtual-OutrasImagens/Pagina\ Principal.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 8%;
+}
+
+.Home {
+  padding-left: 750px;
+  text-align: center;
+  color: #202020;
+  width: 100%;
+}
+
+.Home h1 {
+  font-size: 64px;
+}
+
+.Home p {
+  font-size: 20px;
+  margin: 25px 0;
+}
+
+.btn-veragora {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 20px;
+  padding: 20px 32px;
+  border: 2px solid var(--main--subtitle--color);
+  background-color: var(--main--subtitle--color);
+  color: var(--main--title--color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-veragora:hover {
+  transform: scale(1.05);
+}
+
+/* ===== PRODUCTS SECTION ===== */
+.tres {
+  height: 120vh;
+  width: 100%;
+  background-image: url('LojaVirtual-Imagens/LojaVirtual-OutrasImagens/Pagina\ Produto.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 8%;
+}
+
+.Cards {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  justify-content: center;
+  text-align: center;
+  gap: 80px;
+}
+
+.Cardi {
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  padding-top: 90px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card h3 {
+  font-size: 20px;
+}
+
+.card .preco {
+  margin: 10px 0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card-button .comprar {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 18px;
+  padding: 10px 15px;
+  border: 2px solid var(--main--subtitle--color);
+  background-color: var(--main--subtitle--color);
+  color: var(--main--title--color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card-button .comprar:hover {
+  transform: scale(1.05);
+}
+
+.card-button .favoritar {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 2px solid #000;
+  background-color: transparent;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-button .favoritar:hover {
+  transform: scale(1.05);
+  background-color: red;
+  color: var(--main--title--color);
+  border-color: red;
+}
+
+.favoritar i {
+  font-size: 20px;
+}
+
+.Pelucia {
+  display: flex;
+  align-items: left;
+  gap: 20px;
+}
+
+.Pelucia i {
+  font-size: 35px;
+}
+
+/* ===== ABOUT SECTION ===== */
+.nick {
+  background-color: var(--footer-bg);
+}
+
+.title {
+  padding-bottom: 70px;
+  text-align: left;
+}
+
+.Sobre-column {
+  display: grid;
+  grid-template-columns: 400px 500px;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+
+.sobre {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.sobre:hover {
+  transform: scale(1.05);
+}
+
+.sobre i {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  padding: 10px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  padding: 50px 0;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 270px);
+}
+
+.footer-row p {
+  margin-bottom: 24px;
+  color: var(--main--color);
+}
+
+.title-footer {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-media {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.footer-media i {
+  font-size: 25px;
+  color: var(--main--color);
+}
+
+.footer-logo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.Logo {
+  border-radius: 100px;
+}
+
+/* ===== MEDIA QUERIES (poderia adicionar responsividade aqui) ===== */
