@@ -148,12 +148,18 @@ header {
 
 .tres1{
     background-color: #ffced8;
+    max-height: 100%;
+    height: 110vh;
 }
 .tres2{
   background-color: #FFE5CE;
+  max-height: 100%;
+    height: 110vh;
 }
 .tres3{
   background-color: #664C43;
+  max-height: 100%;
+    height: 110vh;
 }
 .Pelucia .bag {
   color: white;
@@ -202,6 +208,12 @@ header {
   justify-content: center;
   gap: 30px;
 }
+.Pelucia i{
+  font-size: 300px;
+}
+
+
+
 
 .card-button .comprar {
   font-family: 'League Spartan', sans-serif;
