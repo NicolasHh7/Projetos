@@ -1,0 +1,416 @@
+:root {
+  /* Paleta de cores base do site */
+   --main--color: #000000;
+  --main--subtitle--color: #4A3333;
+  --main--title--color: #FFFFFF;
+  --bg: #FFFBF3;
+  --card-bg: rgb(255, 248, 239);
+  --footer-bg: rgb(244, 248, 211);
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg);
+  color: #333;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 1442px;
+}
+/* Container padrão */
+section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin: 0 auto;
+  max-width: 1171px;
+}
+/* NAV */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 6px 0;
+  font-size: 16px;
+}
+.header section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1171px;
+  margin: 0 auto;
+  padding: 3px 1.5rem;
+  background-color: var(--bg);
+  border-radius: 100px;
+  border: 1px solid black;
+}
+.header section a {
+  color: var(--main--color);
+  margin-right: 20px;
+  font-size: 16px;
+}
+.icon-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  animation: slideIn 0.5s ease-in-out;
+}
+.navbar a {
+  transition: transform 0.2s ease;
+  color: var(--main--color);
+}
+.navbar a:hover {
+  border-bottom: 2px solid var(--main--subtitle--color);
+}
+.icons {
+  display: flex;
+  gap: 20px;
+}
+.icons a i {
+  font-size: 24px;
+  color: var(--main--color);
+  margin-top: 3px;
+}
+/* Botão de login */
+.btn-entrar {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 14px;
+  padding: 6px 14px;
+  border: 2px solid #000;
+  background-color: transparent;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.btn-entrar:hover {
+  transform: scale(1.05);
+  background-color: var(--main--subtitle--color);
+  color: var(--main--title--color);
+  border-color: var(--main--subtitle--color);
+}
+/* HOME */
+.casa {
+  height: 100vh;
+  width: 100%;
+  background-image: url('LojaVirtual-Imagens/LojaVirtual-OutrasImagens/Pagina\ Coleções.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 8%;
+  text-align: center;
+}
+.Home {
+  padding-left: 750px;
+  text-align: center;
+  color: #202020;
+  width: 100%;
+  max-width: none;
+}
+.Home h1 {
+  font-size: 64px;
+}
+.Home p {
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.btn-veragora {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 20px;
+  padding: 20px 32px;
+  border: 2px solid var(--main--subtitle--color);
+  background-color: var(--main--subtitle--color);
+  color: var(--main--title--color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.btn-veragora:hover {
+  transform: scale(1.05);
+}
+/* Títulos */
+
+
+/* ===== PRODUCTS SECTION ===== */
+
+.tres1{
+    background-image: url('LojaVirtual-Imagens/LojaVirtual-OutrasImagens/Stars.png');
+    max-height: 100%;
+    height: 110vh;
+}
+
+
+.Cards {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  justify-content: center;
+  text-align: center;
+  gap: 80px;
+}
+
+.Cardi {
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  padding-top: 90px;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card h3 {
+  font-size: 20px;
+}
+
+.card .preco {
+  margin: 10px 0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.Pelucia i{
+  font-size: 300px;
+}
+
+
+
+
+.card-button .comprar {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 18px;
+  padding: 10px 15px;
+  border: 2px solid var(--main--subtitle--color);
+  background-color: var(--main--subtitle--color);
+  color: var(--main--title--color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card-button .comprar:hover {
+  transform: scale(1.05);
+}
+
+.card-button .favoritar {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 2px solid #000;
+  background-color: transparent;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-button .favoritar:hover {
+  transform: scale(1.05);
+  background-color: red;
+  color: var(--main--title--color);
+  border-color: red;
+}
+
+.favoritar i {
+  font-size: 20px;
+}
+
+.Pelucia {
+  display: flex;
+  align-items: left;
+  gap: 20px;
+}
+
+.Pelucia i {
+  font-size: 35px;
+}
+
+/* ===== ABOUT SECTION ===== */
+.nick1 {
+  height: 110vh;
+  max-height: 100%;
+  background-image: url('LojaVirtual-Imagens/LojaVirtual-OutrasImagens/Pagina\ Produto.png');
+}
+.nick{
+  background-color: #FFF8EF;
+}
+
+.title {
+  padding-bottom: 70px;
+  text-align: left;
+}
+
+.Sobre-column {
+  display: grid;
+  grid-template-columns: 400px 500px;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+
+.sobre {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.sobre:hover {
+  transform: scale(1.05);
+}
+
+.sobre i {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  padding: 10px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  padding: 50px 0;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 270px);
+}
+
+.footer-row p {
+  margin-bottom: 24px;
+  color: var(--main--color);
+}
+
+.title-footer {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-media {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.footer-media i {
+  font-size: 25px;
+  color: var(--main--color);
+}
+
+.footer-logo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.Logo {
+  border-radius: 100px;
+}
+
+/* ===== MEDIA QUERIES (poderia adicionar responsividade aqui) ===== */
+
+/* ===== PRODUCT PAGE STYLES ===== */
+.product-container {
+    display: flex;
+    gap: 60px;
+}
+.nick1 .title{
+  margin-top: 30px;
+}
+.nick1 section{
+  display: grid;
+  grid-template-rows: 100px 1fr;
+}
+
+.product-image {
+    flex: 1;
+    background-color: white;
+    border-radius: 30px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.product-info {
+    flex: 1;
+    padding-top: 20px;
+}
+
+.product-price {
+    font-size: 28px;
+    color: #4A3333;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.buy-btn {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 18px;
+    padding: 16px 32px;
+    border: 2px solid #4A3333;
+    background-color: #4A3333;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 40px;
+}
+
+.buy-btn:hover {
+    transform: scale(1.02);
+    background-color: #3a2828;
+}
+
+.divider {
+    height: 1px;
+    background: #ddd;
+    margin: 30px 0;
+}
+
+.product-description h2 {
+    font-size: 24px;
+    color: #4A3333;
+    margin-bottom: 20px;
+}
+
+.product-description p {
+    line-height: 1.6;
+    color: #555;
+    font-size: 17px;
+}
