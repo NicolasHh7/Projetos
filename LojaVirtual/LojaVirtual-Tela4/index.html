@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f820dbb5aa.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+    <title>Loja Virtual de Pelúcias</title>
+</head>
+<body>
+    <header class="header">
+   
+            <section>
+                <a href="#" class="icon-logo">
+                    <img src="LojaVirtual-Imagens/LojaVirtual-OutrasImagens/LojaVirtual-Imagem-Icone.jpg" class="Logo" width="66.93px" height="62.99px">
+                    Nuvell
+                </a>
+                    
+                <nav class="navbar">
+                    <a href="#">Pelúcias</a>
+                    <a href="#Destaques">Destaques</a>
+                    <a href="#Coleções">Coleções</a>
+                </nav> 
+
+                <div class="icons">
+                    <button class="btn-entrar">Entrar</button>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </section>
+    </header>
+
+    <section class="oi">
+        <div class="Endereco-Entrega">
+            <h1>Endereço de Entrega</h1>
+            <form>
+                <div class="row3">
+                    <div>
+                          <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome" required><br><br>
+
+                    </div>
+                    <div>
+                         <label for="cep">CEP:</label><br>
+                    <input type="text" id="cep" name="cep" pattern="\d{5}-?\d{3}" placeholder="00000-000" required><br><br>
+           
+                    </div>
+           
+                </div>
+                <div class="row2">
+                    <div>
+                        <label for="rua">Rua:</label><br>
+                    <input type="text" id="rua" name="rua" required><br><br>
+
+                    </div>
+                    <div>
+                        
+                    <label for="numero">Número:</label><br>
+                    <input type="text" id="numero" name="numero" required><br><br>
+
+                    </div>
+                    <div>
+                        <label for="bairro">Bairro:</label><br>
+                        <input type="text" id="bairro" name="bairro" required><br><br>
+
+                    </div>
+
+                </div>
+                <div class="row1">
+                    <div>
+                        <label for="cidade">Cidade:</label><br>
+                    <input type="text" id="cidade" name="cidade" required><br><br>
+                    </div>
+                    <div>
+                        <label for="celular">Celular:</label><br>
+                    <input type="tel" id="celular" name="celular" pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" placeholder="(00) 00000-0000" required><br><br>
+
+                    </div>
+              
+                    <div>
+                              <label for="complemento">Complemento:</label><br>
+                    <input type="text" id="complemento" name="complemento"><br><br>
+                    </div>
+            
+                </div>
+                <button type="submit" class="btn-veragora">Cadastrar</button>
+            </form>
+        </div>
+
+
+
+        <div class="Formas-Pagamento">
+            
+            <h1>Formas de Pagamento</h1>
+            <form>
+                <div class="Boleto-Bancario">
+                    <button type="button" class="circle-button"></button>
+                <i class="fa-solid fa-barcode"></i>
+                <h3>Boleto Bancário</h3>   
+                </div>
+                <div class="Pix">
+                    <button type="button" class="circle-button"></button>
+                <i class="fa-brands fa-pix"></i>
+                    <h3>Pix</h3>
+                </div>
+                <div class="Cartao-Credito">
+                    <button type="button" class="circle-button"></button>
+                    <i class="fa-solid fa-credit-card"></i>
+                    <h3>Cartão de Credito</h3>
+                </div>
+                 <button type="submit" class="comprar-btn">Comprar</button>
+            </form>
+        </div>
+
+
+    </section>
+
+
+</body>
+</html>
